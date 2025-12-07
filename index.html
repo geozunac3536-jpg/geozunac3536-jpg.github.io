@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TCDS — Portal Oficial de la Teoría Cromodinámica Sincrónica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal oficial del proyecto TCDS (Teoría Cromodinámica Sincrónica): canon operacional TRL9, sistema predictivo sísmico, Reloj Causal, gradiente económico, módulos de mente y línea 3I/ATLAS.">
+  <meta name="author" content="Genaro Carrasco Ozuna" />
+  <meta name="keywords" content="TCDS, Teoría Cromodinámica Sincrónica, Q–Σ–φ–χ, coherencia, sismos, Reloj Causal, sincronón, 3I ATLAS, CSL-H, TRL9">
+
+  <!-- (Opcional) Google Tag Manager global si quieres reutilizar el mismo ID -->
+  <!--
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KC4PBWKF');
+  </script>
+  -->
+
+  <style>
+    :root {
+      --bg: #03040c;
+      --bg-alt: #090f22;
+      --card: #10152b;
+      --fg: #f5f7ff;
+      --muted: #a4aac5;
+      --accent: #36e1ff;
+      --accent2: #ff6bff;
+      --accent-ok: #4ade80;
+      --border-soft: rgba(255, 255, 255, 0.06);
+      --shadow-soft: 0 20px 45px rgba(0, 0, 0, 0.75);
+      --radius: 18px;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", Roboto, sans-serif;
+      --transition: 0.16s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #181d3a 0%, #050616 40%, #020309 100%);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 2.5rem 1.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .badge-row {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      color: var(--muted);
+      background: rgba(10, 12, 30, 0.9);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 1rem auto 2.5rem;
+      padding: 0 1.4rem 2rem;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, rgba(12, 18, 46, 0.98), rgba(4, 5, 18, 0.98));
+      border-radius: var(--radius);
+      padding: 1.8rem 1.6rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-main h2 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--accent);
+    }
+
+    .hero-main p {
+      font-size: 0.95rem;
+      color: var(--fg);
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+    }
+
+    .hero-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      border: 1px solid rgba(54, 225, 255, 0.4);
+      background: radial-gradient(circle at top, rgba(54, 225, 255, 0.16), transparent 60%);
+      text-decoration: none;
+      color: var(--fg);
+      transition: background var(--transition), transform var(--transition),
+                  border-color var(--transition);
+    }
+
+    .hero-links a span.icon {
+      font-size: 0.9rem;
+    }
+
+    .hero-links a:hover {
+      background: radial-gradient(circle at top, rgba(255, 107, 255, 0.16), transparent 60%);
+      border-color: rgba(255, 107, 255, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.2rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+    }
+
+    .card h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--fg);
+      margin-bottom: 0.4rem;
+    }
+
+    .card ul {
+      margin: 0.3rem 0 0.6rem 1.2rem;
+      padding: 0;
+    }
+
+    .card ul li {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .card .cta-row {
+      margin-top: 0.3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .chip-link {
+      font-size: 0.78rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(5, 7, 20, 0.9);
+      transition: background var(--transition),
+                  border-color var(--transition),
+                  color var(--transition),
+                  transform var(--transition);
+    }
+
+    .chip-link:hover {
+      background: rgba(54, 225, 255, 0.14);
+      border-color: rgba(54, 225, 255, 0.7);
+      color: var(--fg);
+      transform: translateY(-1px);
+    }
+
+    .section-title {
+      margin: 1.8rem 0 0.6rem;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+    }
+
+    .link-list {
+      list-style: none;
+      margin: 0.4rem 0 0;
+      padding: 0;
+    }
+
+    .link-list li {
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+    }
+
+    .link-list a {
+      color: var(--accent);
+    }
+
+    .author {
+      margin-top: 1.6rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .author strong {
+      color: var(--fg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.4rem 1rem 2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border-soft);
+      background: linear-gradient(180deg, rgba(3, 4, 12, 0.98), rgba(1, 1, 6, 1));
+    }
+
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .hero-main {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.6rem;
+      }
+      .hero-main > div {
+        flex: 1;
+      }
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TCDS</h1>
+    <p>
+      Portal oficial de la <strong>Teoría Cromodinámica Sincrónica</strong> (TCDS):  
+      un marco de coherencia universal basado en Q–Σ–φ–χ, aplicado a física, sismología,
+      mente y economía, con un canon operacional auditable en nivel <strong>TRL9</strong>.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Q–Σ–φ–χ</span>
+      <span class="badge">Σ-metrics &amp; E-Veto</span>
+      <span class="badge">Reloj Causal</span>
+      <span class="badge">Σ-Predictivo Sísmico</span>
+      <span class="badge">CSL-H / Mente</span>
+      <span class="badge">3I/ATLAS</span>
+      <span class="badge">Gradiente Económico</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-main">
+        <div>
+          <h2>Entrada principal al Canon Operacional TRL9</h2>
+          <p>
+            Si vienes desde Google Scholar, Zenodo u otros índices científicos,
+            este portal concentra las rutas oficiales del proyecto TCDS.  
+            El núcleo de referencia es el <strong>DOI maestro</strong>, que describe
+            el Canon Operacional y el catálogo completo de productos de investigación:
+          </p>
+          <div class="hero-links">
+            <a href="https://doi.org/10.5281/zenodo.17848365" target="_blank" rel="noopener">
+              <span class="icon">🎓</span>
+              <span>DOI maestro · Canon TCDS 2025</span>
+            </a>
+            <a href="https://geozunac3536-jpg.github.io/TCDS-/" target="_blank" rel="noopener">
+              <span class="icon">🧭</span>
+              <span>Canon operacional (sitio TCDS-)</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p>
+            A continuación puedes elegir tu ruta según tu rol o interés principal:
+          </p>
+          <ul style="font-size:0.9rem;color:var(--muted);margin-left:1rem;margin-top:0.4rem;">
+            <li><strong>Científicos/Académicos</strong>: teoría, datos, auditoría y TRL.</li>
+            <li><strong>Instituciones/Industria</strong>: usos, riesgos, licencias y gradiente económico.</li>
+            <li><strong>Público general</strong>: idea central de TCDS y aplicaciones.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Rutas por perfil">
+      <div class="grid">
+        <!-- Científicos / Académicos -->
+        <article class="card">
+          <h3>Científicos / Académicos</h3>
+          <p>
+            Si tu foco es la evaluación científica del paradigma, aquí tienes
+            las rutas con teoría, datasets, auditoría y estado TRL.
+          </p>
+          <ul>
+            <li>Marco Q–Σ–φ–χ, sincronón σ, Σ–χ.</li>
+            <li>Σ-metrics, Filtro de Honestidad (E-Veto).</li>
+            <li>Registro Auditable, Evento Cero, 3I/ATLAS.</li>
+          </ul>
+          <div class="cta-row">
+            <a class="chip-link" href="https://geozunac3536-jpg.github.io/TCDS-/" target="_blank" rel="noopener">
+              Canon TCDS / TRL9
+            </a>
+            <a class="chip-link" href="https://geozunac3536-jpg.github.io/Proyecto_TCDS/" target="_blank" rel="noopener">
+              Núcleo teórico &amp; auditoría
+            </a>
+            <a class="chip-link" href="https://zenodo.org/search?q=Genaro+Carrasco+Ozuna" target="_blank" rel="noopener">
+              Todos los DOIs en Zenodo
+            </a>
+          </div>
+        </article>
+
+        <!-- Industria / Gobierno -->
+        <article class="card">
+          <h3>Instituciones / Industria</h3>
+          <p>
+            Si representas a empresas, gobiernos o equipos de riesgo, estas rutas
+            resumen aplicaciones, límites, licencias y gradiente económico.
+          </p>
+          <ul>
+            <li>Sistema Σ-Predictivo sísmico (experimental, no reemplaza redes oficiales).</li>
+            <li>Reloj Causal y estandarización del Tiempo Causal t<sub>C</sub>.</li>
+            <li>Modelo de negocio, licencias duales y KPI económicos.</li>
+          </ul>
+          <div class="cta-row">
+            <a class="chip-link" href="https://geozunac3536-jpg.github.io/TCDS-SISTEMA-PREDICTIVO/" target="_blank" rel="noopener">
+              Sistema Σ-Predictivo Sísmico
+            </a>
+            <a class="chip-link" href="https://geozunac3536-jpg.github.io/TCDS_Gradiente_Economico/" target="_blank" rel="noopener">
+              Gradiente Económico TCDS
+            </a>
+            <a class="chip-link" href="https://zenodo.org/records/17498200" target="_blank" rel="noopener">
+              Licencias TCDS (DOI)
+            </a>
+          </div>
+        </article>
+
+        <!-- Público general -->
+        <article class="card">
+          <h3>Público general</h3>
+          <p>
+            Si quieres entender la idea general de TCDS sin entrar en todas las
+            ecuaciones, aquí encuentras explicaciones, ejemplos y casos.
+          </p>
+          <ul>
+            <li>¿Qué es la coherencia Σ y por qué importa?</li>
+            <li>¿Cómo se relaciona con sismos, mente y decisiones?</li>
+            <li>Relatos y material de divulgación.</li>
+          </ul>
+          <div class="cta-row">
+            <a class="chip-link" href="https://geozunac3536-jpg.github.io/TCDS-/#resumen" target="_blank" rel="noopener">
+              Resumen TCDS (canon)
+            </a>
+            <a class="chip-link" href="https://zenodo.org/records/17584200" target="_blank" rel="noopener">
+              “La Mente” · TCDS
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Mapa rápido">
+      <h2 class="section-title">Mapa rápido de nodos TCDS</h2>
+      <ul class="link-list">
+        <li>
+          🔹 <strong>Canon operacional TRL9:</strong>
+          <a href="https://geozunac3536-jpg.github.io/TCDS-/" target="_blank" rel="noopener">
+            https://geozunac3536-jpg.github.io/TCDS-/
+          </a>
+        </li>
+        <li>
+          🔹 <strong>Núcleo teórico y auditoría trazable:</strong>
+          <a href="https://geozunac3536-jpg.github.io/Proyecto_TCDS/" target="_blank" rel="noopener">
+            https://geozunac3536-jpg.github.io/Proyecto_TCDS/
+          </a>
+        </li>
+        <li>
+          🔹 <strong>Sistema Σ-Predictivo Sísmico:</strong>
+          <a href="https://geozunac3536-jpg.github.io/TCDS-SISTEMA-PREDICTIVO/" target="_blank" rel="noopener">
+            https://geozunac3536-jpg.github.io/TCDS-SISTEMA-PREDICTIVO/
+          </a>
+        </li>
+        <li>
+          🔹 <strong>Gradiente Económico TCDS:</strong>
+          <a href="https://geozunac3536-jpg.github.io/TCDS_Gradiente_Economico/" target="_blank" rel="noopener">
+            https://geozunac3536-jpg.github.io/TCDS_Gradiente_Economico/
+          </a>
+        </li>
+        <li>
+          🔹 <strong>Reloj Causal Humano (web):</strong>
+          <a href="https://zenodo.org/records/17677864" target="_blank" rel="noopener">
+            DOI 10.5281/zenodo.17677864
+          </a>
+        </li>
+        <li>
+          🔹 <strong>Evento Cero (Puebla–Morelos 2017):</strong>
+          <a href="https://zenodo.org/records/17605698" target="_blank" rel="noopener">
+            DOI 10.5281/zenodo.17605698
+          </a>
+        </li>
+        <li>
+          🔹 <strong>Línea 3I/ATLAS:</strong>
+          <a href="https://zenodo.org/search?q=3I+ATLAS+TCDS" target="_blank" rel="noopener">
+            Búsqueda 3I/ATLAS en Zenodo
+          </a>
+        </li>
+      </ul>
+
+      <div class="author">
+        <p>
+          <strong>Autor:</strong> Genaro Carrasco Ozuna ·  
+          <strong>ORCID:</strong>
+          <a href="https://orcid.org/0009-0005-6358-9910" target="_blank" rel="noopener">
+            0009-0005-6358-9910
+          </a> ·
+          <strong>Contacto:</strong>
+          <a href="mailto:geozunac3536@gmail.com">geozunac3536@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <section aria-label="Cómo citar">
+      <h2 class="section-title">Cómo citar TCDS</h2>
+      <p style="font-size:0.9rem;color:var(--muted);">
+        Para referirte al canon operacional completo de la TCDS, se recomienda citar el DOI maestro:
+      </p>
+      <pre style="margin-top:0.5rem;font-size:0.8rem;padding:0.8rem 1rem;background:#050715;border-radius:14px;border:1px solid var(--border-soft);overflow-x:auto;">
+Carrasco Ozuna, G. (2025).
+TCDS — Canon Operacional & Auditoría Científica TRL9 (DOI maestro 2025).
+Zenodo. https://doi.org/10.5281/zenodo.17848365
+      </pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Genaro Carrasco Ozuna · Proyecto TCDS · Portal oficial</p>
+  </footer>
+</body>
+</html>
