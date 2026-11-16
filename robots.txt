@@ -1,0 +1,24 @@
+# Faro de descubrimiento — Genaro Carrasco Ozuna
+# ORCID: https://orcid.org/0009-0005-6358-9910
+# Dominio abierto a rastreadores académicos, de búsqueda, de IA y de archivo.
+
+User-agent: *
+Allow: /
+# Para excluir solo el sitio con datos personales, quite el # de la línea siguiente:
+# Disallow: /trazabilidad_pnt/
+
+Sitemap: https://geozunac3536-jpg.github.io/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/Formalismo-TCDS-/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/LBCU/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/Proyecto_TCDS/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS-Business-Plan/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS-MASTER/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS-NODO/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS-SISTEMA-PREDICTIVO/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS-Teoria-Operacional/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS-UNIFICADO/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/TCDS_Convergencia/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/Tcds-estudio-de-sigma-chi/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/Teoria_de_la_cromodinamica_sincronica/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/predicciones_3I_ATLAS/sitemap.xml
+Sitemap: https://geozunac3536-jpg.github.io/torque-coherencial-optimized/sitemap.xml
